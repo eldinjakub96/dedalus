@@ -27,4 +27,17 @@ namespace DedalusTask
             string longestName = string.Empty;
             string longestPath = string.Empty;
 
-           
+            foreach (var dir in Directory.GetDirectories(directory, "*", SearchOption.AllDirectories))
+            {
+                string dirName = Path.GetFileName(dir);
+                if (dirName.Length > longestName.Length)
+                {
+                    longestName = dirName;
+                    longestPath = dir;
+                }
+            }
+
+            return (longestName, longestPath);
+        }
+    }
+}
