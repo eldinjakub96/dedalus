@@ -1,0 +1,15 @@
+C:\Users\Dino\Documents\Dedalus\DedalusTask\bin\Debug\net7.0\DedalusTask.exe
+C:\Users\Dino\Documents\Dedalus\DedalusTask\bin\Debug\net7.0\DedalusTask.deps.json
+C:\Users\Dino\Documents\Dedalus\DedalusTask\bin\Debug\net7.0\DedalusTask.runtimeconfig.json
+C:\Users\Dino\Documents\Dedalus\DedalusTask\bin\Debug\net7.0\DedalusTask.dll
+C:\Users\Dino\Documents\Dedalus\DedalusTask\bin\Debug\net7.0\DedalusTask.pdb
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.csproj.AssemblyReference.cache
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.AssemblyInfoInputs.cache
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.AssemblyInfo.cs
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.csproj.CoreCompileInputs.cache
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.dll
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\refint\DedalusTask.dll
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.pdb
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\DedalusTask.genruntimeconfig.cache
+C:\Users\Dino\Documents\Dedalus\DedalusTask\obj\Debug\net7.0\ref\DedalusTask.dll
