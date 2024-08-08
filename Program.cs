@@ -7,8 +7,10 @@ namespace DedalusTask
     {
         static void Main(string[] args)
         {
-            // Use the first command-line argument or environment variable, or default to "/data"
-            string directory = args.Length > 0 ? args[0] : Environment.GetEnvironmentVariable("DIRECTORY_PATH") ?? "/data";
+            // For local testing, prompt for directory if no arguments or environment variables are provided
+            string directory = args.Length > 0 ? args[0] : Environment.GetEnvironmentVariable("DIRECTORY_PATH") ?? GetDirectoryFromUser();
+
+            Console.WriteLine($"Checking directory: {directory}");
 
             // Validate if the input is not null or empty and is a valid directory
             if (string.IsNullOrEmpty(directory) || !Directory.Exists(directory))
@@ -19,7 +21,14 @@ namespace DedalusTask
 
             // Find and print the subdirectory with the longest name
             var (longestName, longestPath) = FindLongestSubdirectory(directory);
-            Console.WriteLine($"The subdirectory with the longest name is: {longestName} in location {longestPath}");
+            Console.WriteLine($"The subdirectory with the longest name is: {longestName}");
+            Console.WriteLine($"In location {longestPath}");
+        }
+
+        static string GetDirectoryFromUser()
+        {
+            Console.Write("Enter the directory you want to check: ");
+            return Console.ReadLine();
         }
 
         static (string longestName, string longestPath) FindLongestSubdirectory(string directory)
