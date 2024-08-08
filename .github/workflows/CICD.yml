@@ -36,7 +36,7 @@ jobs:
 
     - name: Create required directories
       run: |
-        docker run --rm -v ${{ github.workspace }}:/app dedalus-task /bin/bash -c "mkdir -p /var/opt/dedalus/userdata/bin /var/opt/dedalus/userdata/charts/beta/validations /var/opt/dedalus/userdata/ci /var/opt/dedalus/userdata/postgres/data/logs /var/opt/dedalus/userdata/script /var/opt/dedalus/userdata/templates"
+        docker run --rm -v /home/runner/work/dedalus/dedalus:/app -w /app dedalus-task /bin/bash -c "mkdir -p /var/opt/dedalus/userdata/bin /var/opt/dedalus/userdata/charts/beta/validations /var/opt/dedalus/userdata/ci /var/opt/dedalus/userdata/postgres/data/logs /var/opt/dedalus/userdata/script /var/opt/dedalus/userdata/templates"
 
     - name: Run Docker container
       run: |
