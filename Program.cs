@@ -7,17 +7,12 @@ namespace DedalusTask
     {
         static void Main(string[] args)
         {
-            // Use an environment variable if available, otherwise prompt for input
-            string directory = Environment.GetEnvironmentVariable("DIRECTORY_PATH");
-            if (string.IsNullOrEmpty(directory))
-            {
-                Console.WriteLine("Enter the directory you want to check:");
-                directory = Console.ReadLine();
-            }
+            // Use an environment variable or default path if no arguments are provided
+            string directory = args.Length > 0 ? args[0] : Environment.GetEnvironmentVariable("DIRECTORY_PATH") ?? "/data";
 
             if (string.IsNullOrEmpty(directory) || !Directory.Exists(directory))
             {
-                Console.WriteLine($"{directory ?? "null"} is not a valid directory");
+                Console.WriteLine($"{directory} is not a valid directory");
                 Environment.Exit(1);
             }
 
