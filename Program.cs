@@ -7,16 +7,13 @@ namespace DedalusTask
     {
         static void Main(string[] args)
         {
-            // Prompt the user for input
-            Console.WriteLine("Enter the directory you want to check:");
-
-            // Get the directory input from the user
-            string? directory = Console.ReadLine();
+            // Use the first command-line argument or environment variable, or default to "/data"
+            string directory = args.Length > 0 ? args[0] : Environment.GetEnvironmentVariable("DIRECTORY_PATH") ?? "/data";
 
             // Validate if the input is not null or empty and is a valid directory
             if (string.IsNullOrEmpty(directory) || !Directory.Exists(directory))
             {
-                Console.WriteLine($"{directory ?? "null"} is not a valid directory");
+                Console.WriteLine($"{directory} is not a valid directory");
                 Environment.Exit(1);
             }
 
@@ -30,17 +27,4 @@ namespace DedalusTask
             string longestName = string.Empty;
             string longestPath = string.Empty;
 
-            foreach (var dir in Directory.GetDirectories(directory, "*", SearchOption.AllDirectories))
-            {
-                string dirName = Path.GetFileName(dir);
-                if (dirName.Length > longestName.Length)
-                {
-                    longestName = dirName;
-                    longestPath = dir;
-                }
-            }
-
-            return (longestName, longestPath);
-        }
-    }
-}
+           
