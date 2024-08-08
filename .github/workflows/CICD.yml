@@ -36,4 +36,4 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run --rm dedalus-task /data
+        docker run --rm -e DIRECTORY_PATH="/var/opt/dedalus/userdata" dedalus-task
