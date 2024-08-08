@@ -36,4 +36,4 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run --rm dedalus-task
+        docker run -it --rm dedalus-task
